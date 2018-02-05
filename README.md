@@ -1,6 +1,6 @@
 # jsincss-aspect-ratio
 
-An aspect ratio plugin for jsincss
+An aspect ratio plugin for [jsincss](https://github.com/tomhodgins/jsincss)
 
 ## About
 
@@ -77,7 +77,7 @@ This example will use the `jsincss` plugin to load a JS-in-CSS stylesheet making
 It's also possible to write your stylesheets as a separate JavaScript module like this, where you import any helper plugins at the top of the stylesheet:
 
 ```js
-import aspect from  'http://unpkg.com/jsincss-aspect-ratio/index.js'
+import aspect from 'http://unpkg.com/jsincss-aspect-ratio/index.js'
 
 export default () => {
 
