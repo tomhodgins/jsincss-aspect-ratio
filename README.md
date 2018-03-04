@@ -62,32 +62,24 @@ This example will use the `jsincss` plugin to load a JS-in-CSS stylesheet making
   import jsincss from 'https://unpkg.com/jsincss/index.js'
   import aspect from 'https://unpkg.com/jsincss-aspect-ratio/index.js'
 
-  jsincss(() => {
+  jsincss(() => `
 
-    return `
+    ${aspect('iframe', 16/9)}
 
-      ${aspect('iframe', 16/9)}
-
-    `
-
-  })
+  `)
 </script>
 ```
 
 It's also possible to write your stylesheets as a separate JavaScript module like this, where you import any helper plugins at the top of the stylesheet:
 
 ```js
-import aspect from 'http://unpkg.com/jsincss-aspect-ratio/index.js'
+import aspect from 'https://unpkg.com/jsincss-aspect-ratio/index.js'
 
-export default () => {
+export default () => `
 
-  return `
+  ${aspect('iframe', 16/9)}
 
-    ${aspect('iframe', 16/9)}
-
-  `
-
-}
+`
 ```
 
 And then import both the `jsincss` plugin and the stylesheet into your code and run them like this, suppling any `selector` or `events` list the `jsincss` plugin might need to apply the stylesheet only the the element(s) and event(s) you require, depending on what you're doing:
