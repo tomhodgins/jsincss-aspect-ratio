@@ -1,20 +1,19 @@
 export default (selector, ratio) => {
 
-  let styles = ''
-  let count = 0
+  return Array.from(document.querySelectorAll(selector))
 
-  document.querySelectorAll(selector).forEach(tag => {
+    .reduce((styles, tag, count) => {
 
-    const attr = selector.replace(/\W/g, '')
-    const width = tag.offsetWidth
-    const height = `${width/ratio}px`
+      const attr = selector.replace(/\W/g, '')
+      const width = tag.offsetWidth
+      const height = `${width/ratio}px`
 
-    tag.setAttribute(`data-aspect-${attr}`, count)
-    styles += `${selector}[data-aspect-${attr}="${count}"] { height: ${height} }\n`
-    count++
+      tag.setAttribute(`data-aspect-${attr}`, count)
+      styles += `${selector}[data-aspect-${attr}="${count}"] { height: ${height} }\n`
+      count++
 
-  })
+      return styles
 
-  return styles
+    }, '')
 
 }
