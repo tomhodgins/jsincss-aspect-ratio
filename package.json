@@ -1,6 +1,6 @@
 {
   "name": "jsincss-aspect-ratio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An aspect ratio plugin for jsincss",
   "main": "index.js",
   "scripts": {
