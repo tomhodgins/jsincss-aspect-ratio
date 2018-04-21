@@ -1,4 +1,4 @@
-module.exports = (selector, ratio) => {
+function aspect(selector, ratio) {
 
   return Array.from(document.querySelectorAll(selector))
 
