@@ -5,7 +5,7 @@ module.exports = (selector, ratio) => {
     .reduce((styles, tag, count) => {
 
       const width = tag.offsetWidth
-       const height = `${width/ratio}px`
+      const height = `${width/ratio}px`
       const attr = selector.replace(/\W/g, '')
 
       tag.setAttribute(`data-aspect-${attr}`, count)
