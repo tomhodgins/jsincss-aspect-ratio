@@ -10,8 +10,6 @@ export default (selector, ratio) => {
 
       tag.setAttribute(`data-aspect-${attr}`, count)
       styles += `${selector}[data-aspect-${attr}="${count}"] { height: ${height} }\n`
-      count++
-
       return styles
 
     }, '')
